@@ -38,7 +38,7 @@ export function TestimonialsSection() {
                   
                   {/* Quote */}
                   <blockquote className="text-lg italic leading-relaxed md:text-xl">
-                    "{testimonial.content}"
+                    &ldquo;{testimonial.content}&rdquo;
                   </blockquote>
                 </div>
 
