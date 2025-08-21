@@ -33,19 +33,19 @@ export function HeroSection() {
                 </span>
               </div>
               
-              <h1 className="mb-6 text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl xl:text-7xl">
+              <h1 className="mb-6 text-4xl font-bold leading-tight text-black md:text-5xl lg:text-6xl xl:text-7xl">
                 Budai Krisztián
-                <span className="block text-primary">Villanyszerelő</span>
+                <span className="block text-black">Villanyszerelő</span>
               </h1>
               
-              <p className="mb-2 text-lg text-gray-200 md:text-xl">
+              <p className="mb-2 text-lg text-black md:text-xl">
                 <strong>10+ év tapasztalat</strong> • Budapest és környéke
               </p>
             </div>
 
             {/* Services & CTA */}
             <div className="space-y-6">
-              <p className="text-base text-gray-200 md:text-lg">
+              <p className="text-base text-black md:text-lg">
                 Szakszerű elektromos szolgáltatások magánszemélyeknek és vállalkozásoknak. 
                 Bízza ránk otthona vagy irodája elektromos rendszerének tervezését, 
                 kivitelezését és karbantartását!
@@ -53,21 +53,21 @@ export function HeroSection() {
 
               {/* Key Services */}
               <div className="grid gap-3 sm:grid-cols-2">
-                <div className="flex items-center gap-3 rounded-lg bg-white/10 p-3 backdrop-blur-sm">
+                <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 backdrop-blur-sm">
                   <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium text-white">Panel lakások felújítása</span>
+                  <span className="text-sm font-medium text-black">Panel lakások felújítása</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-lg bg-white/10 p-3 backdrop-blur-sm">
+                <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 backdrop-blur-sm">
                   <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium text-white">Hálózati modernizálás</span>
+                  <span className="text-sm font-medium text-black">Hálózati modernizálás</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-lg bg-white/10 p-3 backdrop-blur-sm">
+                <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 backdrop-blur-sm">
                   <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium text-white">Okos otthon rendszerek</span>
+                  <span className="text-sm font-medium text-black">Okos otthon rendszerek</span>
                 </div>
-                <div className="flex items-center gap-3 rounded-lg bg-white/10 p-3 backdrop-blur-sm">
+                <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 backdrop-blur-sm">
                   <div className="h-2 w-2 rounded-full bg-primary"></div>
-                  <span className="text-sm font-medium text-white">Kamera rendszerek</span>
+                  <span className="text-sm font-medium text-black">Kamera rendszerek</span>
                 </div>
               </div>
 
