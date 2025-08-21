@@ -8,7 +8,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/80 to-slate-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-slate-900/90 z-10" />
           <img
             src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&h=1080&fit=crop&crop=center"
             alt="Elektromos szerelés munka"
@@ -19,7 +19,7 @@ export function HeroSection() {
       
       {/* Content */}
       <div className="px-[5%]">
-        <div className="relative z-10 container mx-auto max-w-7xl">
+        <div className="relative z-20 container mx-auto max-w-7xl">
           <div className="grid grid-rows-1 items-start gap-y-8 py-12 md:grid-cols-2 md:gap-x-12 md:gap-y-12 md:py-18 lg:gap-x-20 lg:gap-y-16 lg:py-20">
             
             {/* Main Heading */}
