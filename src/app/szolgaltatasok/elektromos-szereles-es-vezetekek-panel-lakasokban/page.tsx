@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { FooterContactForm } from '@/components/sections/footer-contact-form';
 import { Zap, Phone, Mail, CheckCircle, Shield, Clock, Award } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -194,6 +195,8 @@ export default function ElektromosSzerelesPage() {
           </div>
         </div>
       </section>
+
+      <FooterContactForm />
     </>
   );
 }

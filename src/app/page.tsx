@@ -4,6 +4,7 @@ import { AboutSection } from '@/components/sections/about-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
 import { FAQSection } from '@/components/sections/faq-section';
 import { ContactSection } from '@/components/sections/contact-section';
+import { FooterContactForm } from '@/components/sections/footer-contact-form';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <TestimonialsSection />
       <FAQSection />
       <ContactSection />
+      <FooterContactForm />
     </>
   );
 }

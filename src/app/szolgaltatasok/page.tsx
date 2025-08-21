@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/data/services';
+import { FooterContactForm } from '@/components/sections/footer-contact-form';
 import { Zap, Home, Shield, Camera, ArrowRight, Phone } from 'lucide-react';
 
 const iconMap = {
@@ -128,6 +129,8 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
+
+      <FooterContactForm />
     </>
   );
 }

@@ -8,10 +8,10 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="relative flex-1">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/90 to-slate-900/90 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/40 to-slate-900/40 z-10" />
           <img
-            src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1920&h=1080&fit=crop&crop=center"
-            alt="Elektromos szerelés munka"
+            src="/images/budai-krisztian-hero.jpg"
+            alt="Budai Krisztián villanyszerelő biztosítótáblánál dolgozik"
             className="absolute inset-0 size-full object-cover"
           />
         </div>

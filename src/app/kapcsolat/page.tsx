@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { ContactSection } from '@/components/sections/contact-section';
+import { FooterContactForm } from '@/components/sections/footer-contact-form';
 
 export const metadata: Metadata = {
   title: 'Kapcsolat | Budai Krisztián Villanyszerelő',
@@ -22,6 +23,7 @@ export default function ContactPage() {
       </section>
       
       <ContactSection />
+      <FooterContactForm />
     </>
   );
 }

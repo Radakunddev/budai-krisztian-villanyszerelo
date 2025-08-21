@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { FooterContactForm } from '@/components/sections/footer-contact-form';
 import { Home, Phone, Mail, CheckCircle, Wrench, Building, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -157,6 +158,8 @@ export default function HalozatiFelujitasPage() {
           </div>
         </div>
       </section>
+
+      <FooterContactForm />
     </>
   );
 }

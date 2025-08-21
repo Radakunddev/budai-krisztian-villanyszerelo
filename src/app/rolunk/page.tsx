@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { AboutSection } from '@/components/sections/about-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
+import { FooterContactForm } from '@/components/sections/footer-contact-form';
 
 export const metadata: Metadata = {
   title: 'Rólunk | Budai Krisztián Villanyszerelő',
@@ -33,6 +34,7 @@ export default function AboutPage() {
       
       <AboutSection />
       <TestimonialsSection />
+      <FooterContactForm />
     </>
   );
 }

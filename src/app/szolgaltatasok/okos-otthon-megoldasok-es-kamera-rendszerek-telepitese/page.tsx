@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { FooterContactForm } from '@/components/sections/footer-contact-form';
 import { Camera, Phone, Mail, CheckCircle, Smartphone, Wifi, Home, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -215,6 +216,8 @@ export default function OkosOtthonPage() {
           </div>
         </div>
       </section>
+
+      <FooterContactForm />
     </>
   );
 }
