@@ -49,13 +49,13 @@ export default function ServicesPage() {
 
               {/* CTA Buttons */}
               <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-                <Button size="lg" className="flex-1 sm:flex-initial" onClick={() => {
+                <Button size="lg" className="w-full sm:w-auto" onClick={() => {
                   document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
                 }}>
                   <Mail className="mr-2 h-5 w-5" />
                   Ingyenes árajánlat
                 </Button>
-                <Button variant="outline" size="lg" className="flex-1 sm:flex-initial" onClick={() => {
+                <Button variant="outline" size="lg" className="w-full sm:w-auto" onClick={() => {
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}>
                   Vissza a tetejére

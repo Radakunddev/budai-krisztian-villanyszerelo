@@ -89,12 +89,12 @@ export function ServicesSection() {
             Vegye fel velem a kapcsolatot, és beszéljük meg, hogyan segíthetek!
           </p>
           <div className="flex flex-col gap-4 justify-center sm:flex-row">
-            <Button size="lg" onClick={() => {
+            <Button size="lg" className="w-full sm:w-auto" onClick={() => {
               document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
             }}>
               Ingyenes árajánlat
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
               <Link href="/szolgaltatasok">
                 Összes szolgáltatás
                 <ArrowRight className="ml-2 h-4 w-4" />

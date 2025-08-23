@@ -91,13 +91,13 @@ export function AboutSection() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Button size="lg" asChild>
+              <Button size="lg" className="w-full sm:w-auto" asChild>
                 <Link href="/rolunk">
                   Tudjon meg többet rólam
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" onClick={() => {
+              <Button variant="outline" size="lg" className="w-full sm:w-auto" onClick={() => {
                 document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
               }}>
                 Kérjen árajánlatot
