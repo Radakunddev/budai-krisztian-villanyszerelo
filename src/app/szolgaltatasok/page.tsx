@@ -1,10 +1,11 @@
-import { Metadata } from 'next';
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { services } from '@/lib/data/services';
 import { FooterContactForm } from '@/components/sections/footer-contact-form';
-import { Zap, Home, Shield, Camera, ArrowRight, Phone } from 'lucide-react';
+import { Zap, Home, Shield, Camera, ArrowRight, Mail } from 'lucide-react';
 
 const iconMap = {
   Zap,
@@ -13,42 +14,64 @@ const iconMap = {
   Camera,
 };
 
-export const metadata: Metadata = {
-  title: 'Szolgáltatások | Budai Krisztián Villanyszerelő',
-  description: 'Teljes körű villanyszerelő szolgáltatások Budapesten és környékén. Elektromos szerelés, hálózati felújítás, okos otthon megoldások, kamera rendszerek.',
-};
-
 export default function ServicesPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-muted/30 px-[5%] py-16 md:py-24 lg:py-28">
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 px-[5%] py-16 md:py-24 lg:py-28">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center">
-            <div className="mb-6">
-              <span className="text-sm font-semibold uppercase tracking-wide text-primary">
-                Budai Krisztián
-              </span>
+          <div className="grid gap-12 md:grid-cols-2 lg:items-center lg:gap-20">
+            
+            {/* Content */}
+            <div className="space-y-8">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <Zap className="h-8 w-8 text-primary" />
+                </div>
+                <span className="text-sm font-semibold uppercase tracking-wide text-primary">
+                  <span className="text-primary">Profi</span> Szolgáltatások
+                </span>
+              </div>
+              
+              <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
+                <span className="text-primary">Professzionális</span> Villanyszerelő
+                <span className="block text-slate-900">Szolgáltatások</span>
+              </h1>
+              
+              <p className="text-lg text-slate-700 md:text-xl">
+                <strong className="text-primary">10+ év tapasztalat</strong> • <span className="text-primary font-semibold">Budapest</span> és környéke
+              </p>
+
+              <p className="text-base text-slate-600 md:text-lg">
+                Több mint <span className="text-primary font-semibold">10 éves tapasztalattal</span> nyújtok <span className="text-primary font-medium">szakszerű</span> elektromos megoldásokat 
+                magánszemélyeknek és vállalkozásoknak <span className="text-primary font-medium">Budapesten</span> és Pest megyében.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col gap-4 pt-4 sm:flex-row">
+                <Button size="lg" className="flex-1 sm:flex-initial" onClick={() => {
+                  document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
+                  <Mail className="mr-2 h-5 w-5" />
+                  Ingyenes árajánlat
+                </Button>
+                <Button variant="outline" size="lg" className="flex-1 sm:flex-initial" onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}>
+                  Vissza a tetejére
+                </Button>
+              </div>
             </div>
-            <h1 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-              Villanyszerelő Szolgáltatások
-            </h1>
-            <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
-              Több mint 10 éves tapasztalattal nyújtok szakszerű elektromos megoldásokat 
-              magánszemélyeknek és vállalkozásoknak Budapesten és Pest megyében.
-            </p>
-            <div className="mt-8 flex flex-col gap-4 justify-center sm:flex-row">
-              <Button size="lg" asChild>
-                <Link href="tel:+36301234567">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Hívjon most!
-                </Link>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/kapcsolat">
-                  Ingyenes konzultáció
-                </Link>
-              </Button>
+
+            {/* Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative aspect-square w-full max-w-md">
+                <img
+                  src="/images/20250630_131250ee.jpg"
+                  alt="Budai Krisztián villanyszerelő szolgáltatások Budapest elektromos szerelés panel lakás"
+                  className="h-full w-full rounded-2xl object-cover shadow-2xl"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -114,17 +137,11 @@ export default function ServicesPage() {
             Vegye fel velem a kapcsolatot, és beszéljük meg személyesen, 
             hogyan segíthetek megoldani az Ön elektromos problémáit!
           </p>
-          <div className="flex flex-col gap-4 justify-center sm:flex-row">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/kapcsolat">
-                Ingyenes árajánlat kérése
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-              <Link href="tel:+36301234567">
-                <Phone className="mr-2 h-4 w-4" />
-                +36 30 123 4567
-              </Link>
+          <div className="flex justify-center">
+            <Button size="lg" variant="secondary" onClick={() => {
+              document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              Ingyenes árajánlat kérése
             </Button>
           </div>
         </div>

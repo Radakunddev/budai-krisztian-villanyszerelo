@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Phone, Mail, Zap } from 'lucide-react';
@@ -15,22 +17,22 @@ export function HeroSection() {
                 <Zap className="h-8 w-8 text-primary" />
               </div>
               <span className="text-sm font-semibold uppercase tracking-wide text-primary">
-                Villanyszerelő szakértő
+                <span className="text-primary">Profi</span> Villanyszerelő Szakértő
               </span>
             </div>
             
             <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
-              Budai Krisztián
+              <span className="text-primary">Budai Krisztián</span>
               <span className="block text-slate-900">Villanyszerelő</span>
             </h1>
             
             <p className="text-lg text-slate-700 md:text-xl">
-              <strong>10+ év tapasztalat</strong> • Budapest és környéke
+              <strong className="text-primary">10+ év tapasztalat</strong> • <span className="text-primary font-semibold">Budapest</span> és környéke
             </p>
 
             <p className="text-base text-slate-600 md:text-lg">
-              Szakszerű elektromos szolgáltatások magánszemélyeknek és vállalkozásoknak. 
-              Bízza ránk otthona vagy irodája elektromos rendszerének tervezését, 
+              <span className="text-primary font-semibold">Szakszerű</span> elektromos szolgáltatások magánszemélyeknek és vállalkozásoknak. 
+              Bízza ránk otthona vagy irodája elektromos rendszerének <span className="text-primary font-medium">professzionális</span> tervezését, 
               kivitelezését és karbantartását!
             </p>
 
@@ -38,34 +40,33 @@ export function HeroSection() {
             <div className="grid gap-3 sm:grid-cols-2">
               <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 shadow-sm">
                 <div className="h-2 w-2 rounded-full bg-primary"></div>
-                <span className="text-sm font-medium text-slate-700">Panel lakások felújítása</span>
+                <span className="text-sm font-medium text-slate-700"><span className="text-primary font-semibold">Profi</span> Panel lakások felújítása</span>
               </div>
               <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 shadow-sm">
                 <div className="h-2 w-2 rounded-full bg-primary"></div>
-                <span className="text-sm font-medium text-slate-700">Hálózati modernizálás</span>
+                <span className="text-sm font-medium text-slate-700"><span className="text-primary font-semibold">Megbízható</span> Hálózati modernizálás</span>
               </div>
               <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 shadow-sm">
                 <div className="h-2 w-2 rounded-full bg-primary"></div>
-                <span className="text-sm font-medium text-slate-700">Okos otthon rendszerek</span>
+                <span className="text-sm font-medium text-slate-700"><span className="text-primary font-semibold">Modern</span> Okos otthon rendszerek</span>
               </div>
               <div className="flex items-center gap-3 rounded-lg bg-white/80 p-3 shadow-sm">
                 <div className="h-2 w-2 rounded-full bg-primary"></div>
-                <span className="text-sm font-medium text-slate-700">Kamera rendszerek</span>
+                <span className="text-sm font-medium text-slate-700"><span className="text-primary font-semibold">Biztonságos</span> Kamera rendszerek</span>
               </div>
             </div>
 
             {/* CTA Buttons */}
             <div className="flex flex-col gap-4 pt-4 sm:flex-row">
-              <Button size="lg" className="flex-1 sm:flex-initial" asChild>
-                <Link href="tel:+36301234567">
-                  <Phone className="mr-2 h-5 w-5" />
-                  Hívjon most!
-                </Link>
+              <Button size="lg" className="flex-1 sm:flex-initial" onClick={() => {
+                document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}>
+                <Mail className="mr-2 h-5 w-5" />
+                Ingyenes árajánlat
               </Button>
               <Button variant="outline" size="lg" className="flex-1 sm:flex-initial" asChild>
-                <Link href="/kapcsolat">
-                  <Mail className="mr-2 h-5 w-5" />
-                  Kapcsolat
+                <Link href="/szolgaltatasok">
+                  Szolgáltatások
                 </Link>
               </Button>
             </div>
@@ -75,8 +76,8 @@ export function HeroSection() {
           <div className="flex justify-center lg:justify-end">
             <div className="relative aspect-square w-full max-w-md">
               <img
-                src="/images/budai-krisztian-hero.jpg"
-                alt="Budai Krisztián villanyszerelő biztosítótáblánál dolgozik"
+                src="/images/20250630_131250ee.jpg"
+                alt="Budai Krisztián villanyszerelő szakértő elektromos szerelés Budapest biztosítótábla modernizálás"
                 className="h-full w-full rounded-2xl object-cover shadow-2xl"
               />
             </div>

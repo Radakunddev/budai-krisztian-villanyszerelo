@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -39,13 +41,13 @@ export function AboutSection() {
                 Krisztián Budai
               </Badge>
               <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
-                A megbízható választás a{' '}
-                <span className="text-primary">villanyszereléshez</span>
+                A <span className="text-primary">megbízható</span> választás a{' '}
+                <span className="text-primary">profi villanyszereléshez</span>
               </h2>
               <p className="text-lg text-muted-foreground md:text-xl">
-                Több mint 10 éves tapasztalattal rendelkezem az elektromos rendszerek 
-                területén. Munkám során mindig a legmagasabb minőséget és megbízhatóságot 
-                tartom szem előtt, hogy ügyfeleink teljesen elégedettek legyenek.
+                Több mint <span className="text-primary font-semibold">10 éves tapasztalattal</span> rendelkezem az elektromos rendszerek 
+                területén. Munkám során mindig a <span className="text-primary font-medium">legmagasabb minőséget</span> és <span className="text-primary font-medium">megbízhatóságot</span> 
+                tartom szem előtt, hogy ügyfeleink <span className="text-primary font-medium">100%-ban elégedettek</span> legyenek.
               </p>
             </div>
 
@@ -53,19 +55,19 @@ export function AboutSection() {
               <div className="flex items-start gap-3">
                 <div className="mt-1 h-2 w-2 rounded-full bg-primary"></div>
                 <p className="text-muted-foreground">
-                  <strong>Szakmai képzettség:</strong> Villanyszerelő mester, folyamatos továbbképzések
+                  <strong className="text-primary">Szakmai képzettség:</strong> <span className="text-primary font-medium">Villanyszerelő mester</span>, folyamatos továbbképzések
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="mt-1 h-2 w-2 rounded-full bg-primary"></div>
                 <p className="text-muted-foreground">
-                  <strong>Szolgáltatási terület:</strong> Budapest és Pest megye
+                  <strong className="text-primary">Szolgáltatási terület:</strong> <span className="text-primary font-medium">Budapest</span> és Pest megye
                 </p>
               </div>
               <div className="flex items-start gap-3">
                 <div className="mt-1 h-2 w-2 rounded-full bg-primary"></div>
                 <p className="text-muted-foreground">
-                  <strong>Specialitások:</strong> Panel lakások, okos otthon rendszerek, kamera telepítés
+                  <strong className="text-primary">Specialitások:</strong> <span className="text-primary font-medium">Panel lakások</span>, okos otthon rendszerek, kamera telepítés
                 </p>
               </div>
             </div>
@@ -95,10 +97,10 @@ export function AboutSection() {
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/kapcsolat">
-                  Kérjen árajánlatot
-                </Link>
+              <Button variant="outline" size="lg" onClick={() => {
+                document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+              }}>
+                Kérjen árajánlatot
               </Button>
             </div>
           </div>
@@ -107,8 +109,8 @@ export function AboutSection() {
           <div className="relative">
             <div className="aspect-[4/5] overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1582729508881-0e532300a437?w=600&h=750&fit=crop&crop=face"
-                alt="Budai Krisztián villanyszerelő munkában"
+                src="/images/20250630_131407.jpg"
+                alt="Budai Krisztián villanyszerelő munkában 10 év tapasztalat Budapest elektromos szerelés"
                 className="h-full w-full object-cover"
               />
             </div>

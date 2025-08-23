@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
@@ -87,10 +89,10 @@ export function ServicesSection() {
             Vegye fel velem a kapcsolatot, és beszéljük meg, hogyan segíthetek!
           </p>
           <div className="flex flex-col gap-4 justify-center sm:flex-row">
-            <Button size="lg" asChild>
-              <Link href="/kapcsolat">
-                Ingyenes konzultáció
-              </Link>
+            <Button size="lg" onClick={() => {
+              document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              Ingyenes árajánlat
             </Button>
             <Button variant="outline" size="lg" asChild>
               <Link href="/szolgaltatasok">

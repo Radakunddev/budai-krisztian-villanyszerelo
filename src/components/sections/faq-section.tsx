@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -45,16 +47,11 @@ export function FAQSection() {
           <p className="mb-8 text-lg text-muted-foreground">
             Ne habozzon, lépjen kapcsolatba velem! Szívesen válaszolok minden kérdésére.
           </p>
-          <div className="flex flex-col gap-4 justify-center sm:flex-row">
-            <Button size="lg" asChild>
-              <Link href="/kapcsolat">
-                Kapcsolatfelvétel
-              </Link>
-            </Button>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="tel:+36301234567">
-                Hívjon most
-              </Link>
+          <div className="flex justify-center">
+            <Button size="lg" onClick={() => {
+              document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              Ingyenes árajánlat
             </Button>
           </div>
         </div>

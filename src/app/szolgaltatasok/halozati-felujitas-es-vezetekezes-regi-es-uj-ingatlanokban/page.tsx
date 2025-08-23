@@ -1,16 +1,31 @@
-import { Metadata } from 'next';
+'use client';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FooterContactForm } from '@/components/sections/footer-contact-form';
 import { Home, Phone, Mail, CheckCircle, Wrench, Building, Zap } from 'lucide-react';
-
-export const metadata: Metadata = {
-  title: 'Hálózati felújítás és vezetékezés | Budai Krisztián Villanyszerelő',
-  description: 'Hálózati felújítás és vezetékezés régi és új ingatlanokban. Szakszerű tervezés, kivitelezés és modernizálás.',
-};
+import { useEffect } from 'react';
+import { serviceStructuredData } from '@/lib/seo/structured-data';
 
 export default function HalozatiFelujitasPage() {
+  useEffect(() => {
+    const structuredData = serviceStructuredData({
+      name: 'Hálózati felújítás és vezetékezés',
+      description: 'Szakértői hálózati felújítás régi és új ingatlanokban, vezetékezés korszerűsítése, energiahatékonysági tanácsadás és tervezés.',
+      url: 'https://budaikrisztian-villanyszerelo.hu/szolgaltatasok/halozati-felujitas-es-vezetekezes-regi-es-uj-ingatlanokban',
+      areaServed: ['Budapest', 'Pest megye']
+    });
+
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(structuredData);
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
   const services = [
     'Régi vezetékek teljes cseréje és korszerűsítése',
     'Új ingatlanok elektromos rendszerének tervezése',
@@ -23,44 +38,59 @@ export default function HalozatiFelujitasPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="flex h-[70vh] min-h-[500px] flex-col bg-gradient-to-br from-green-900 to-blue-900">
-        <div className="relative flex-1">
-          <div className="absolute inset-0 z-0">
-            <img
-              src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1920&h=1080&fit=crop&crop=center"
-              alt="Hálózati felújítás és vezetékezés"
-              className="absolute inset-0 size-full object-cover opacity-30"
-            />
-          </div>
-        </div>
-        
-        <div className="px-[5%]">
-          <div className="relative z-10 container mx-auto max-w-7xl">
-            <div className="grid grid-rows-1 items-start gap-y-8 py-12 md:grid-cols-2 md:gap-x-12 md:py-18 lg:gap-x-20 lg:py-20">
-              <div>
-                <h1 className="mb-6 text-4xl font-bold text-white md:text-5xl lg:text-6xl">
-                  Hálózati felújítás és vezetékezés
-                </h1>
-              </div>
-              <div>
-                <p className="mb-6 text-lg text-gray-200 md:text-xl">
-                  A régi ingatlanok hálózati felújítása sok kihívással járhat. 
-                  Szakszerű tervezéssel és kivitelezéssel garantálom a biztonságot és a hatékonyságot.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button size="lg" asChild>
-                    <Link href="/kapcsolat">
-                      <Mail className="mr-2 h-4 w-4" />
-                      Kapcsolat
-                    </Link>
-                  </Button>
-                  <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-white/20 text-white hover:bg-white/20" asChild>
-                    <Link href="tel:+36301234567">
-                      <Phone className="mr-2 h-4 w-4" />
-                      Hívjon
-                    </Link>
-                  </Button>
+      <section className="bg-gradient-to-br from-slate-50 to-blue-50 px-[5%] py-16 md:py-24 lg:py-28">
+        <div className="container mx-auto max-w-7xl">
+          <div className="grid gap-12 md:grid-cols-2 lg:items-center lg:gap-20">
+            
+            {/* Content */}
+            <div className="space-y-8">
+              <div className="mb-6 flex items-center gap-3">
+                <div className="rounded-full bg-primary/10 p-3">
+                  <Home className="h-8 w-8 text-primary" />
                 </div>
+                <span className="text-sm font-semibold uppercase tracking-wide text-primary">
+                  <span className="text-primary">Szakszerű</span> Hálózati felújítás
+                </span>
+              </div>
+              
+              <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
+                <span className="text-primary">Professzionális</span> Hálózati felújítás
+                <span className="block text-slate-900">és vezetékezés</span>
+              </h1>
+              
+              <p className="text-lg text-slate-700 md:text-xl">
+                <strong className="text-primary">10+ év tapasztalat</strong> • <span className="text-primary font-semibold">Budapest</span> és környéke
+              </p>
+
+              <p className="text-base text-slate-600 md:text-lg">
+                A régi ingatlanok hálózati felújítása sok kihívással járhat. 
+                <span className="text-primary font-semibold">Szakszerű</span> tervezéssel és kivitelezéssel <span className="text-primary font-medium">garantálom</span> a biztonságot és a hatékonyságot.
+              </p>
+
+              {/* CTA Buttons */}
+              <div className="flex flex-col gap-4 pt-4 sm:flex-row">
+                <Button size="lg" className="flex-1 sm:flex-initial" onClick={() => {
+                  document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+                }}>
+                  <Mail className="mr-2 h-5 w-5" />
+                  Ingyenes árajánlat
+                </Button>
+                <Button variant="outline" size="lg" className="flex-1 sm:flex-initial" asChild>
+                  <Link href="/szolgaltatasok">
+                    Szolgáltatások
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="flex justify-center lg:justify-end">
+              <div className="relative aspect-square w-full max-w-md">
+                <img
+                  src="/images/20250630_131407.jpg"
+                  alt="Hálózati felújítás és vezetékezés Budapest régi új ingatlan elektromos korszerűsítés"
+                  className="h-full w-full rounded-2xl object-cover shadow-2xl"
+                />
               </div>
             </div>
           </div>
@@ -143,17 +173,11 @@ export default function HalozatiFelujitasPage() {
           <p className="mb-8 text-xl opacity-90">
             Szakszerű tervezéssel és modern anyagokkal garantálom a biztonságos és hatékony megoldást.
           </p>
-          <div className="flex flex-col gap-4 justify-center sm:flex-row">
-            <Button size="lg" variant="secondary" asChild>
-              <Link href="/kapcsolat">
-                Ingyenes helyszíni felmérés
-              </Link>
-            </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary" asChild>
-              <Link href="tel:+36301234567">
-                <Phone className="mr-2 h-4 w-4" />
-                +36 30 123 4567
-              </Link>
+          <div className="flex justify-center">
+            <Button size="lg" variant="secondary" onClick={() => {
+              document.querySelector('#contact-form')?.scrollIntoView({ behavior: 'smooth' });
+            }}>
+              Ingyenes helyszíni felmérés
             </Button>
           </div>
         </div>

@@ -60,10 +60,6 @@ export function ContactSection() {
                   <div>
                     <h3 className="font-semibold">Telefon</h3>
                     <a 
-                      href="tel:+36301234567" 
-                      className="text-muted-foreground transition-colors hover:text-primary"
-                    >
-                      +36 30 123 4567
                     </a>
                   </div>
                 </CardContent>

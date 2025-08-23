@@ -104,12 +104,6 @@ export function Header() {
               Kapcsolat
             </Link>
           </Button>
-          <Button size="sm" asChild>
-            <Link href="tel:+36301234567">
-              <Phone className="mr-2 h-4 w-4" />
-              Hívás
-            </Link>
-          </Button>
         </div>
 
         {/* Mobile Menu Button */}
@@ -190,12 +184,6 @@ export function Header() {
                 <Link href="/kapcsolat" onClick={() => setIsMenuOpen(false)}>
                   <Mail className="mr-2 h-4 w-4" />
                   Kapcsolat
-                </Link>
-              </Button>
-              <Button asChild>
-                <Link href="tel:+36301234567" onClick={() => setIsMenuOpen(false)}>
-                  <Phone className="mr-2 h-4 w-4" />
-                  +36 30 123 4567
                 </Link>
               </Button>
             </div>
