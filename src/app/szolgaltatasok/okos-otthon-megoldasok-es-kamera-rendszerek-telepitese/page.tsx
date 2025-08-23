@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FooterContactForm } from '@/components/sections/footer-contact-form';
-import { Camera, Phone, Mail, CheckCircle, Smartphone, Wifi, Home, Zap } from 'lucide-react';
+import { Camera, Mail, CheckCircle, Smartphone, Wifi, Home } from 'lucide-react';
 import { useEffect } from 'react';
 import { serviceStructuredData } from '@/lib/seo/structured-data';
 

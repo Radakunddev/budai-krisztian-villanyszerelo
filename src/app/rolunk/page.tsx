@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { AboutSection } from '@/components/sections/about-section';
 import { TestimonialsSection } from '@/components/sections/testimonials-section';
 import { FooterContactForm } from '@/components/sections/footer-contact-form';
-import { Phone, Mail, Zap } from 'lucide-react';
+import { Mail, Zap } from 'lucide-react';
 
 export default function AboutPage() {
   return (

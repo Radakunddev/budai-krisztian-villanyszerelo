@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { FooterContactForm } from '@/components/sections/footer-contact-form';
-import { Phone, Mail, Zap } from 'lucide-react';
+import { Mail, Zap } from 'lucide-react';
 
 export default function ContactPage() {
   return (

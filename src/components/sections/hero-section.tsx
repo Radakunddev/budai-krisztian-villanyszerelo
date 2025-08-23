@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Phone, Mail, Zap } from 'lucide-react';
+import { Mail, Zap } from 'lucide-react';
 
 export function HeroSection() {
   return (

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { FooterContactForm } from '@/components/sections/footer-contact-form';
-import { Shield, Phone, Mail, CheckCircle, AlertTriangle, Bell, Eye } from 'lucide-react';
+import { Shield, Mail, CheckCircle, AlertTriangle, Bell, Eye } from 'lucide-react';
 import { useEffect } from 'react';
 import { serviceStructuredData } from '@/lib/seo/structured-data';
 
