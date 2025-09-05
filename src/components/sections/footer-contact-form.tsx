@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Send } from 'lucide-react';
+import { Ratings } from './ratings';
 
 export function FooterContactForm() {
   const [formData, setFormData] = useState({
@@ -42,7 +43,9 @@ export function FooterContactForm() {
   };
 
   return (
-    <section id="contact-form" className="bg-white px-[5%] py-16 md:py-20">
+    <>
+      <Ratings />
+      <section id="contact-form" className="bg-white px-[5%] py-16 md:py-20">
       <div className="container mx-auto max-w-2xl">
         <div className="mb-8 text-center">
           <h2 className="mb-4 text-3xl font-bold text-slate-900 md:text-4xl">
@@ -113,5 +116,6 @@ export function FooterContactForm() {
         </form>
       </div>
     </section>
+    </>
   );
 }
