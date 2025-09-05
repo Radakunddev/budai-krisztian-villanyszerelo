@@ -46,25 +46,25 @@ export default function KisfeszultseguSzolgaltatasokPage() {
             <div className="space-y-8">
               <div className="mb-6 flex items-center gap-3">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Shield className="h-8 w-8 text-primary" />
+                  <Shield className="h-8 w-8 text-highlight" />
                 </div>
-                <span className="text-sm font-semibold uppercase tracking-wide text-primary">
-                  <span className="text-primary">Biztonsági</span> Kisfeszültségű rendszerek
+                <span className="text-sm font-semibold uppercase tracking-wide text-highlight">
+                  <span className="text-highlight">Biztonsági</span> Kisfeszültségű rendszerek
                 </span>
               </div>
               
               <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
-                <span className="text-primary">Profi</span> Kisfeszültségű
+                <span className="text-highlight">Profi</span> Kisfeszültségű
                 <span className="block text-slate-900">szolgáltatások</span>
               </h1>
               
               <p className="text-lg text-slate-700 md:text-xl">
-                <strong className="text-primary">10+ év tapasztalat</strong> • <span className="text-primary font-semibold">Budapest</span> és környéke
+                <strong className="text-highlight">10+ év tapasztalat</strong> • <span className="text-highlight font-semibold">Budapest</span> és környéke
               </p>
 
               <p className="text-base text-slate-600 md:text-lg">
-                A <span className="text-primary font-semibold">kisfeszültségű szolgáltatások</span>, mint a tűzjelzők és riasztók, 
-                <span className="text-primary font-medium">elengedhetetlenek</span> a biztonságos otthon megteremtéséhez.
+                A <span className="text-highlight font-semibold">kisfeszültségű szolgáltatások</span>, mint a tűzjelzők és riasztók, 
+                <span className="text-highlight font-medium">elengedhetetlenek</span> a biztonságos otthon megteremtéséhez.
               </p>
 
               {/* CTA Buttons */}
@@ -112,7 +112,7 @@ export default function KisfeszultseguSzolgaltatasokPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {services.map((service, index) => (
               <div key={index} className="flex items-start gap-3 rounded-lg bg-muted/30 p-6">
-                <CheckCircle className="mt-1 h-5 w-5 text-primary flex-shrink-0" />
+                <CheckCircle className="mt-1 h-5 w-5 text-highlight flex-shrink-0" />
                 <span className="font-medium">{service}</span>
               </div>
             ))}
@@ -164,7 +164,7 @@ export default function KisfeszultseguSzolgaltatasokPage() {
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                  <Shield className="h-8 w-8 text-primary" />
+                  <Shield className="h-8 w-8 text-highlight" />
                 </div>
                 <CardTitle>Karbantartás</CardTitle>
               </CardHeader>
@@ -197,6 +197,55 @@ export default function KisfeszultseguSzolgaltatasokPage() {
             }}>
               Biztonsági felmérés kérése
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-background px-[5%] py-16 md:py-24 lg:py-28">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mb-12 text-center md:mb-18 lg:mb-20">
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+              Gyakran Ismételt Kérdések
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
+              Válaszok a kisfeszültségű rendszerekkel kapcsolatos leggyakoribb kérdésekre.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>Mit jelentenek a kisfeszültségű szolgáltatások?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>A kisfeszültségű rendszerek az erősáramú hálózatoktól elkülönülő, alacsonyabb feszültségen működő rendszerek. Ide tartoznak például a kaputelefonok, a riasztórendszerek, a kamera rendszerek, a számítógépes hálózatok (Ethernet) és a különböző okos otthon eszközök.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Miért érdemes szakemberre bízni a kisfeszültségű rendszerek telepítését?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Bár ezek a rendszerek alacsony feszültségen működnek, a szakszerűtlen telepítés működési problémákhoz, a drága eszközök meghibásodásához és akár biztonsági résekhez is vezethet (pl. egy rosszul beállított riasztó- vagy kamerarendszer).</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Milyen típusú kaputelefonokat telepít?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Vállalom a hagyományos, analóg kaputelefonok, valamint a modern, videós és IP-alapú okos kaputelefonok telepítését, javítását és karbantartását is, társasházak és családi házak számára egyaránt.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>A meglévő riasztórendszeremet tudja bővíteni vagy modernizálni?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Igen, a legtöbb esetben a meglévő riasztórendszerek bővíthetők új érzékelőkkel, vagy modernizálhatók okos funkciókkal, például mobiltelefonos értesítéssel és távoli vezérléssel.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

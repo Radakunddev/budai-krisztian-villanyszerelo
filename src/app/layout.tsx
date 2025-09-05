@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { MainLayout } from "@/components/layout/main-layout";
 import { defaultMetadata } from "@/lib/seo/metadata";
 import { organizationStructuredData, localBusinessStructuredData } from "@/lib/seo/structured-data";
 
@@ -51,11 +50,7 @@ export default function RootLayout({
       <body
         className={`${inter.variable} font-sans antialiased min-h-screen bg-background text-foreground`}
       >
-        <Header />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        <MainLayout>{children}</MainLayout>
       </body>
     </html>
   );

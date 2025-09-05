@@ -47,25 +47,25 @@ export default function OkosOtthonPage() {
             <div className="space-y-8">
               <div className="mb-6 flex items-center gap-3">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Camera className="h-8 w-8 text-primary" />
+                  <Camera className="h-8 w-8 text-highlight" />
                 </div>
-                <span className="text-sm font-semibold uppercase tracking-wide text-primary">
-                  <span className="text-primary">Intelligens</span> Okos otthon rendszerek
+                <span className="text-sm font-semibold uppercase tracking-wide text-highlight">
+                  <span className="text-highlight">Intelligens</span> Okos otthon rendszerek
                 </span>
               </div>
               
               <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
-                <span className="text-primary">Modern</span> Okos otthon
+                <span className="text-highlight">Modern</span> Okos otthon
                 <span className="block text-slate-900">és kamera rendszerek</span>
               </h1>
               
               <p className="text-lg text-slate-700 md:text-xl">
-                <strong className="text-primary">10+ év tapasztalat</strong> • <span className="text-primary font-semibold">Budapest</span> és környéke
+                <strong className="text-highlight">10+ év tapasztalat</strong> • <span className="text-highlight font-semibold">Budapest</span> és környéke
               </p>
 
               <p className="text-base text-slate-600 md:text-lg">
-                Segítek megvalósítani álmai <span className="text-primary font-semibold">okos otthonát</span> modern technológiával. 
-                Bízza rám a <span className="text-primary font-medium">professzionális</span> kamerarendszerek telepítését és élvezze a biztonságot!
+                Segítek megvalósítani álmai <span className="text-highlight font-semibold">okos otthonát</span> modern technológiával. 
+                Bízza rám a <span className="text-highlight font-medium">professzionális</span> kamerarendszerek telepítését és élvezze a biztonságot!
               </p>
 
               {/* CTA Buttons */}
@@ -113,7 +113,7 @@ export default function OkosOtthonPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {services.map((service, index) => (
               <div key={index} className="flex items-start gap-3 rounded-lg bg-muted/30 p-6 shadow-sm">
-                <CheckCircle className="mt-1 h-5 w-5 text-primary flex-shrink-0" />
+                <CheckCircle className="mt-1 h-5 w-5 text-highlight flex-shrink-0" />
                 <span className="font-medium">{service}</span>
               </div>
             ))}
@@ -128,7 +128,7 @@ export default function OkosOtthonPage() {
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                  <Smartphone className="h-8 w-8 text-primary" />
+                  <Smartphone className="h-8 w-8 text-highlight" />
                 </div>
                 <CardTitle className="text-xl">Távvezérlés</CardTitle>
               </CardHeader>
@@ -142,7 +142,7 @@ export default function OkosOtthonPage() {
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                  <Wifi className="h-8 w-8 text-primary" />
+                  <Wifi className="h-8 w-8 text-highlight" />
                 </div>
                 <CardTitle className="text-xl">Okos hálózat</CardTitle>
               </CardHeader>
@@ -156,7 +156,7 @@ export default function OkosOtthonPage() {
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                  <Home className="h-8 w-8 text-primary" />
+                  <Home className="h-8 w-8 text-highlight" />
                 </div>
                 <CardTitle className="text-xl">Teljes integráció</CardTitle>
               </CardHeader>
@@ -189,6 +189,55 @@ export default function OkosOtthonPage() {
             }}>
               Ingyenes konzultáció
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-background px-[5%] py-16 md:py-24 lg:py-28">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mb-12 text-center md:mb-18 lg:mb-20">
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+              Gyakran Ismételt Kérdések
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
+              Válaszok az okos otthonokkal és kamera rendszerekkel kapcsolatos leggyakoribb kérdésekre.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>Milyen előnyei vannak az okos otthon rendszereknek?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Az okos otthon rendszerek kényelmesebbé, biztonságosabbá és energiahatékonyabbá teszik otthonát. Lehetővé teszik a világítás, fűtés, redőnyök és egyéb elektromos eszközök távoli vezérlését, automatizálását és időzítését.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Milyen típusú kamera rendszereket telepít?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Telepítek hagyományos, analóg (CCTV) és modern, IP-alapú (hálózati) kamera rendszereket is. Az IP kamerák általában jobb képminőséget és több okos funkciót kínálnak, mint például a távoli elérés mobiltelefonról vagy a mozgásérzékelés alapú felvételindítás.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Szükséges a teljes lakás átvezetékezése egy okos otthon rendszer telepítéséhez?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Nem feltétlenül. Ma már számos vezeték nélküli (Wi-Fi, Zigbee, Z-Wave) okos otthon eszköz létezik, amelyek telepítése nem igényel falbontást. Egy komplexebb, vezetékes rendszer kiépítése azonban stabilabb működést és nagyobb megbízhatóságot nyújthat.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>A kamera rendszerem felvételeit hol tárolhatom?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>A felvételek tárolhatók helyben, egy hálózati rögzítőn (NVR/DVR), vagy a felhőben is. A felhő alapú tárolás előnye, hogy a felvételek akkor is biztonságban vannak, ha a rögzítő eszközt ellopják vagy megrongálják.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

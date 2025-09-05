@@ -46,25 +46,25 @@ export default function HalozatiFelujitasPage() {
             <div className="space-y-8">
               <div className="mb-6 flex items-center gap-3">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Home className="h-8 w-8 text-primary" />
+                  <Home className="h-8 w-8 text-highlight" />
                 </div>
-                <span className="text-sm font-semibold uppercase tracking-wide text-primary">
-                  <span className="text-primary">Szakszerű</span> Hálózati felújítás
+                <span className="text-sm font-semibold uppercase tracking-wide text-highlight">
+                  <span className="text-highlight">Szakszerű</span> Hálózati felújítás
                 </span>
               </div>
               
               <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
-                <span className="text-primary">Professzionális</span> Hálózati felújítás
+                <span className="text-highlight">Professzionális</span> Hálózati felújítás
                 <span className="block text-slate-900">és vezetékezés</span>
               </h1>
               
               <p className="text-lg text-slate-700 md:text-xl">
-                <strong className="text-primary">10+ év tapasztalat</strong> • <span className="text-primary font-semibold">Budapest</span> és környéke
+                <strong className="text-highlight">10+ év tapasztalat</strong> • <span className="text-highlight font-semibold">Budapest</span> és környéke
               </p>
 
               <p className="text-base text-slate-600 md:text-lg">
                 A régi ingatlanok hálózati felújítása sok kihívással járhat. 
-                <span className="text-primary font-semibold">Szakszerű</span> tervezéssel és kivitelezéssel <span className="text-primary font-medium">garantálom</span> a biztonságot és a hatékonyságot.
+                <span className="text-highlight font-semibold">Szakszerű</span> tervezéssel és kivitelezéssel <span className="text-highlight font-medium">garantálom</span> a biztonságot és a hatékonyságot.
               </p>
 
               {/* CTA Buttons */}
@@ -109,7 +109,7 @@ export default function HalozatiFelujitasPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {services.map((service, index) => (
               <div key={index} className="flex items-start gap-3 rounded-lg bg-muted/30 p-6">
-                <CheckCircle className="mt-1 h-5 w-5 text-primary flex-shrink-0" />
+                <CheckCircle className="mt-1 h-5 w-5 text-highlight flex-shrink-0" />
                 <span className="font-medium">{service}</span>
               </div>
             ))}
@@ -119,7 +119,7 @@ export default function HalozatiFelujitasPage() {
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                  <Building className="h-8 w-8 text-primary" />
+                  <Building className="h-8 w-8 text-highlight" />
                 </div>
                 <CardTitle>Régi ingatlanok</CardTitle>
               </CardHeader>
@@ -133,7 +133,7 @@ export default function HalozatiFelujitasPage() {
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                  <Home className="h-8 w-8 text-primary" />
+                  <Home className="h-8 w-8 text-highlight" />
                 </div>
                 <CardTitle>Új építésű ingatlanok</CardTitle>
               </CardHeader>
@@ -147,7 +147,7 @@ export default function HalozatiFelujitasPage() {
             <Card className="text-center">
               <CardHeader>
                 <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                  <Wrench className="h-8 w-8 text-primary" />
+                  <Wrench className="h-8 w-8 text-highlight" />
                 </div>
                 <CardTitle>Karbantartás</CardTitle>
               </CardHeader>
@@ -179,6 +179,55 @@ export default function HalozatiFelujitasPage() {
             }}>
               Ingyenes helyszíni felmérés
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-background px-[5%] py-16 md:py-24 lg:py-28">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mb-12 text-center md:mb-18 lg:mb-20">
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+              Gyakran Ismételt Kérdések
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
+              Válaszok a hálózati felújítással és vezetékezéssel kapcsolatos leggyakoribb kérdésekre.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>Mikor van szükség egy ingatlan elektromos hálózatának felújítására?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>A felújítás általában 20-30 évnél idősebb ingatlanoknál válik szükségessé, illetve ha az ingatlanban elavult (pl. alumínium) vezetékek vannak. A gyakori áramkimaradások, a melegedő konnektorok vagy a villogó fények szintén intő jelek lehetnek.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Mennyi időt vesz igénybe egy teljes hálózati felújítás?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Az időtartam nagyban függ az ingatlan méretétől és a felújítás komplexitásától. Egy átlagos családi ház esetében a teljes vezetékezés cseréje 5-10 munkanapot is igénybe vehet.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Milyen anyagokat használ a vezetékezés során?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Kizárólag minőségi, a magyar és EU szabványoknak megfelelő réz vezetékeket és szerelvényeket használok, amelyek hosszú távon is biztonságos és megbízható működést garantálnak.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>A falak bontásával jár a vezetékezés cseréje?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>A legtöbb esetben igen, a régi vezetékek eltávolítása és az újak elhelyezése a falakban horonymarással és véséssel jár. A munka végeztével a falakat szakszerűen helyreállítjuk, de a festés általában a megrendelő feladata.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

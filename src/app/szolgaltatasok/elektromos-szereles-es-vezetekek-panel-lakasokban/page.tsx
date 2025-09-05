@@ -64,25 +64,25 @@ export default function ElektromosSzerelesPage() {
             <div className="space-y-8">
               <div className="mb-6 flex items-center gap-3">
                 <div className="rounded-full bg-primary/10 p-3">
-                  <Zap className="h-8 w-8 text-primary" />
+                  <Zap className="h-8 w-8 text-highlight" />
                 </div>
-                <span className="text-sm font-semibold uppercase tracking-wide text-primary">
-                  <span className="text-primary">Profi</span> Panel lakások
+                <span className="text-sm font-semibold uppercase tracking-wide text-highlight">
+                  <span className="text-highlight">Profi</span> Panel lakások
                 </span>
               </div>
               
               <h1 className="text-4xl font-bold leading-tight text-slate-900 md:text-5xl lg:text-6xl">
-                <span className="text-primary">Profi</span> Elektromos szerelés
+                <span className="text-highlight">Profi</span> Elektromos szerelés
                 <span className="block text-slate-900">panel lakásokban</span>
               </h1>
               
               <p className="text-lg text-slate-700 md:text-xl">
-                <strong className="text-primary">10+ év tapasztalat</strong> • <span className="text-primary font-semibold">Budapest</span> és környéke
+                <strong className="text-highlight">10+ év tapasztalat</strong> • <span className="text-highlight font-semibold">Budapest</span> és környéke
               </p>
 
               <p className="text-base text-slate-600 md:text-lg">
-                <span className="text-primary font-semibold">Szakértői</span> elektromos szerelési szolgáltatásokat kínálunk panel lakásokban, 
-                hogy otthona <span className="text-primary font-medium">biztonságos</span> és kényelmes legyen. <span className="text-primary font-medium">Tapasztalt szakemberként</span> 
+                <span className="text-highlight font-semibold">Szakértői</span> elektromos szerelési szolgáltatásokat kínálunk panel lakásokban, 
+                hogy otthona <span className="text-highlight font-medium">biztonságos</span> és kényelmes legyen. <span className="text-highlight font-medium">Tapasztalt szakemberként</span> 
                 gyorsan és hatékonyan oldom meg az elektromos problémákat.
               </p>
 
@@ -122,7 +122,7 @@ export default function ElektromosSzerelesPage() {
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-x-12 lg:gap-x-20">
             <div>
               <div className="mb-4">
-                <span className="text-sm font-semibold uppercase tracking-wide text-primary">
+                <span className="text-sm font-semibold uppercase tracking-wide text-highlight">
                   Villanyszerelő
                 </span>
               </div>
@@ -164,7 +164,7 @@ export default function ElektromosSzerelesPage() {
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 mb-12">
             {services.map((service, index) => (
               <div key={index} className="flex items-start gap-3 rounded-lg bg-background p-6 shadow-sm">
-                <CheckCircle className="mt-1 h-5 w-5 text-primary flex-shrink-0" />
+                <CheckCircle className="mt-1 h-5 w-5 text-highlight flex-shrink-0" />
                 <span className="font-medium">{service}</span>
               </div>
             ))}
@@ -177,7 +177,7 @@ export default function ElektromosSzerelesPage() {
                 <Card key={index} className="text-center">
                   <CardHeader>
                     <div className="mx-auto mb-4 w-fit rounded-lg bg-primary/10 p-3">
-                      <IconComponent className="h-8 w-8 text-primary" />
+                      <IconComponent className="h-8 w-8 text-highlight" />
                     </div>
                     <CardTitle className="text-xl">{feature.title}</CardTitle>
                   </CardHeader>
@@ -212,6 +212,55 @@ export default function ElektromosSzerelesPage() {
             }}>
               Ingyenes árajánlat kérése
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="bg-background px-[5%] py-16 md:py-24 lg:py-28">
+        <div className="container mx-auto max-w-7xl">
+          <div className="mb-12 text-center md:mb-18 lg:mb-20">
+            <h2 className="mb-6 text-4xl font-bold md:text-5xl lg:text-6xl">
+              Gyakran Ismételt Kérdések
+            </h2>
+            <p className="mx-auto max-w-3xl text-lg text-muted-foreground md:text-xl">
+              Válaszok a leggyakoribb kérdésekre panel lakások elektromos szerelésével kapcsolatban.
+            </p>
+          </div>
+
+          <div className="grid gap-8 md:grid-cols-2">
+            <Card>
+              <CardHeader>
+                <CardTitle>Milyen gyakran kell ellenőrizni a panel lakások elektromos rendszerét?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Javasoljuk, hogy legalább 10 évente végeztessen el egy teljes körű elektromos felülvizsgálatot. Azonban, ha bármilyen rendellenességet tapasztal (pl. gyakori áramkimaradások, villogó fények), azonnal hívjon szakembert.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Mennyi ideig tart egy panel lakás teljes elektromos felújítása?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Egy átlagos méretű panel lakás (kb. 50-70 nm) teljes elektromos felújítása általában 3-5 munkanapot vesz igénybe, a munka komplexitásától függően.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>Milyen előnyökkel jár a régi alumínium vezetékek cseréje réz vezetékekre?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>A réz vezetékek sokkal biztonságosabbak és megbízhatóbbak, mint a régi alumínium vezetékek. Jobban bírják a terhelést, csökkentik a túlmelegedés és a tűzveszély kockázatát, és megfelelnek a modern elektromos szabványoknak.</p>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle>A biztosítéktábla cseréje mindig szükséges egy felújítás során?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p>Nem minden esetben, de erősen ajánlott. A régi, olvadóbiztosítékos táblák nem nyújtanak megfelelő védelmet a mai megnövekedett energiafogyasztási igények mellett. A modern, kismegszakítókkal ellátott táblák sokkal biztonságosabbak és könnyebben kezelhetők.</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
